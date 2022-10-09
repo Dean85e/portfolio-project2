@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1 id="heading">Rock paper Scissors</h1>
+    <h2 class="instruction">Please make a choice :</h2>
     
     <div class="player-selection">
         <button class="select"> ✊ </button>
@@ -17,17 +18,21 @@
         <button class="select"> ✌️</button>
     </div>
     <div class="player-area">
-        <h3 id="column-heading">Player</h3>
+        <h3 id="column-heading">Player Score:<span id="player">0</span></h3>
     </div>
     
     <div class="computer-area">
-         <h3 id="column-heading">Computer</h3>
+         <h3 id="column-heading">Comp Score:<span id="computer">0</span></h3>
     </div>
-
-    <div class="score-area">
-        <div class="user-score">Your Score: <span id="player">0</span></div>
-        <div class="computer-score">Computers Score: <span id="computer">0</span></div>
-    </div>
+ 
+    <div class="game-rules">
+        <h3 id="rule-text" class="rule-text-block">Rules</h3>
+         <p id="rule-text">Scissors cuts Paper</p>
+         <p id="rule-text">Paper covers Rock</p>
+         <p id="rule-text">Rock blunts Scissors</p>
+    </div>    
+    
+    
 
      <script src="assets/js/script.js"></script>
 </body>
