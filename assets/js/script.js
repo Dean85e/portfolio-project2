@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
            let playerChoice = this.getAttribute("data-choice");
             
                 runGame(playerChoice);
-              
+            
             
         })
          
