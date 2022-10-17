@@ -1,7 +1,8 @@
  //    Declaring variables with global scope.         
 let playerScore = 0;
 let computerScore = 0;
-
+let reset = document.getElementById("restart");
+reset.addEventListener("click", restartGame);
 
 // Wait for the Dom content to be loaded.
 // Add Event listeners to the buttons.
@@ -15,11 +16,13 @@ document.addEventListener("DOMContentLoaded", function(){
            let playerChoice = this.getAttribute("data-choice");
             
                 runGame(playerChoice);
-            
-            
+               
+                  
+                
         })
-         
-    }
+       
+           
+    }   
     
 })
                                    // Running game.
@@ -29,6 +32,7 @@ function runGame(playerChoice){
     let compChoice = computerChoice();
     console.log(compChoice); 
     checkWinner(playerChoice, compChoice);
+  
      
 }
 
@@ -82,19 +86,30 @@ function checkWinner(playerChoice, computerChoice){
                 console.log("Computer is Loser");
                 incrementPlayerScore();
             }
-        
-          
-      }
+           
+    }
 }
                                     // Increment player score & user Score .
 function incrementPlayerScore(){
      ++ playerScore;
     document.getElementById("player-score").innerHTML = "Player: " + playerScore;
-  
-
+    
+    
 }
 
 function incrementComputerScore(){
     ++ computerScore;
     document.getElementById("computer-score").innerHTML ="Computer: " + computerScore;
+
+    
+      
+}
+
+
+function restartGame(){
+    playerScore = 0;
+    computerScore = 0;
+   document.getElementById("player-score").innerHTML = "Player: 0";
+   document.getElementById("computer-score").innerHTML ="Computer: 0";
+
 }

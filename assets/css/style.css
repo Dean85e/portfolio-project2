@@ -60,6 +60,17 @@
     display: flex;
     justify-content: center;
 }
+#your-choice{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+
+#computer-choice{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
 .reset-area{
     display: flex;
     justify-content: center;
