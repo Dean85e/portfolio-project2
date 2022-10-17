@@ -11,7 +11,7 @@
      padding: 5px 5px 5px 5px;
  }
 
- #game-info {
+ #reset-game{
      display: flex;
      justify-content: center;
      margin-top: 15px;
@@ -74,16 +74,9 @@
      justify-content: center;
      margin-top: 75px;
  }
+ 
 
- .reset-area {
-     display: flex;
-     justify-content: center;
-     padding: 5px 5px 5px 5px;
-     margin-top: 50px;
-     margin-bottom: 50px;
- }
-
- button.reset {
+ button#restart {
 
      padding: 1em 1em;
      border-radius: 6px;
@@ -92,6 +85,7 @@
  }
 
  .game-rules {
+     position: absolute;
      left: 0;
      bottom: 0;
      box-sizing: border-box;
@@ -99,6 +93,7 @@
      width: 100%;
      background-color: gray;
      clear: both;
+     margin-bottom: -50px;
 
  }
 

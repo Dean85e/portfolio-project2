@@ -24,8 +24,10 @@
             <button class="select" data-choice="Paper" aria-label="Paper"> 🖐️</button>
             <button class="select" data-choice="Scissors" aria-label="Scissors"> ✌️</button>
         </div>
-
-        <h3 id="game-info">First to 10 wins !</h3>
+        <div id="reset-game">
+            <button id="restart" data-choice="Restart" aria-label="Restart">Restart Game</button>
+        </div>
+        
 
         <div class="player-area">
             <h3 id="player-score">Player:<span id="player">0</span></h3>
@@ -35,10 +37,6 @@
         <div class="computer-area">
             <h3 id="computer-score">Computer:<span id="computer">0</span></h3>
             <p id="computer-choice"></p>
-        </div>
-
-        <div class="reset-area">
-            <button id="restart" data-choice="Restart" aria-label="Restart">Restart Game</button>
         </div>
 
     </section>
