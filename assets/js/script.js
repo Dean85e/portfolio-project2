@@ -20,6 +20,7 @@
              runGame(playerChoice);
              
          })
+       
         
        
      }
@@ -34,7 +35,10 @@
      checkWinner(playerChoice, compChoice);
      document.getElementById("your-emoji").innerHTML = playerChoice;
      document.getElementById("computer-emoji").innerHTML = compChoice;
-    
+     
+     if(playerScore >= 10 || computerScore >= 10){
+        gameOver();
+     }
  }
 
  function computerChoice() { // Random selection for computer choice.
@@ -74,42 +78,42 @@
          case "Rock":
              if (computerChoice === "Paper") {
                  console.log("Computer is Winner");
-                 document.getElementById("your-choice").innerHTML = "looser!";
-                 document.getElementById("computer-choice").innerHTML = "Winner!";
+                 document.getElementById("your-choice").innerHTML = null;
+                 document.getElementById("computer-choice").innerHTML = "Paper Wins!";
                  incrementComputerScore();
              } else {
                  console.log("Computer is Loser");
                  incrementPlayerScore();
-                 document.getElementById("your-choice").innerHTML = "Winner!";
-                 document.getElementById("computer-choice").innerHTML = "Looser!";
+                 document.getElementById("your-choice").innerHTML = "Rock Wins!";
+                 document.getElementById("computer-choice").innerHTML = null;
              }
              break;
 
          case "Paper":
              if (computerChoice === "Scissors") {
                  console.log("Computer is Winner");
-                 document.getElementById("your-choice").innerHTML = "looser!";
-                 document.getElementById("computer-choice").innerHTML = "Winner!";
+                 document.getElementById("your-choice").innerHTML = null;
+                 document.getElementById("computer-choice").innerHTML = "Scissors Wins!";
                  incrementComputerScore();
              } else {
                  console.log("Computer is Loser");
                  incrementPlayerScore();
-                 document.getElementById("your-choice").innerHTML = "Winner!";
-                 document.getElementById("computer-choice").innerHTML = "Looser!";
+                 document.getElementById("your-choice").innerHTML = "Paper Wins!";
+                 document.getElementById("computer-choice").innerHTML = null;
 
              }
              break;
          case "Scissors":
              if (computerChoice === "Rock") {
                  console.log("Computer is Winner");
-                 document.getElementById("your-choice").innerHTML = "looser!";
-                 document.getElementById("computer-choice").innerHTML = "Winner!";
+                 document.getElementById("your-choice").innerHTML = null;
+                 document.getElementById("computer-choice").innerHTML = "Rock Wins!";
                  incrementComputerScore();
              } else {
                  console.log("Computer is Loser");
                  incrementPlayerScore();
-                 document.getElementById("your-choice").innerHTML = "Winner!";
-                 document.getElementById("computer-choice").innerHTML = "Looser!";
+                 document.getElementById("your-choice").innerHTML = "Scissors Wins!";
+                 document.getElementById("computer-choice").innerHTML = null;
              }
             
 
@@ -150,5 +154,10 @@
      document.getElementById("computer-emoji").innerHTML = "Ready !";
      
      
+ }
+
+ function gameOver(){
+    console.log("game over");
+
  }
  
