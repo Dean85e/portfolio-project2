@@ -17,7 +17,7 @@
         <h1 id="heading">Rock paper Scissors</h1>
     </header>
     <section>
-        <h2 class="instruction">Please make a choice :</h2>
+        <h2 class="instruction">Make Your Choice :</h2>
 
         <div class="player-selection">
             <button class="select" data-choice="Rock" aria-label="Rock"> ✊ </button>
@@ -25,17 +25,19 @@
             <button class="select" data-choice="Scissors" aria-label="Scissors"> ✌️</button>
         </div>
         <div id="reset-game">
-            <button id="restart" data-choice="Restart" aria-label="Restart">Restart Game</button>
+            <button id="restart" data-choice="Reset" aria-label="Restart">Restart Game</button>
         </div>
         
 
         <div class="player-area">
             <h3 id="player-score">Player:<span id="player">0</span></h3>
+            <p id="your-emoji"></p>
             <p id="your-choice"></p>
         </div>
 
         <div class="computer-area">
             <h3 id="computer-score">Computer:<span id="computer">0</span></h3>
+            <p id="computer-emoji"></p>
             <p id="computer-choice"></p>
         </div>
 

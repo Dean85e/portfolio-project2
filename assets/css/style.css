@@ -62,6 +62,19 @@
      display: flex;
      justify-content: center;
  }
+ 
+ #your-emoji{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+ }
+
+ #computer-emoji{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+ }
+
 
  #your-choice {
      display: flex;

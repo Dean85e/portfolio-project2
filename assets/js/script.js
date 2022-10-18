@@ -1,8 +1,9 @@
  //    Declaring variables with global scope.         
  let playerScore = 0;
  let computerScore = 0;
- let reset = document.getElementById("restart");
- reset.addEventListener("click", restartGame);
+
+
+    
 
  // Wait for the Dom content to be loaded.
  // Add Event listeners to the buttons.
@@ -13,14 +14,14 @@
      for (let button of buttons) {
          button.addEventListener("click", function () {
              let playerChoice = this.getAttribute("data-choice");
-
+             let reset = document.getElementById("restart");
+             reset.addEventListener("click", restartGame);
+ 
              runGame(playerChoice);
-
-
-
+             
          })
-
-
+        
+       
      }
 
  })
@@ -28,16 +29,18 @@
  function runGame(playerChoice) {
 
      console.log(playerChoice);
-     let compChoice = computerChoice();
+     compChoice = computerChoice();
      console.log(compChoice);
      checkWinner(playerChoice, compChoice);
-
-
+     document.getElementById("your-emoji").innerHTML = playerChoice;
+     document.getElementById("computer-emoji").innerHTML = compChoice;
+    
  }
 
  function computerChoice() { // Random selection for computer choice.
 
      let compChoice = Math.floor(Math.random() * 3);
+    
 
      switch (compChoice) {
          case 0:
@@ -49,9 +52,13 @@
          case 2:
              return "Paper";
              break;
+        
+         }
+         
      }
-
- }
+     
+      
+ 
  // Determine if player has won or computer has won.
 
  function checkWinner(playerChoice, computerChoice) {
@@ -104,8 +111,11 @@
                  document.getElementById("your-choice").innerHTML = "Winner!";
                  document.getElementById("computer-choice").innerHTML = "Looser!";
              }
+            
 
      }
+    
+    
  }
  // Increment player score & user Score .
  function incrementPlayerScore() {
@@ -123,6 +133,8 @@
 
  }
 
+ 
+
                            // Restart the game.
  function restartGame() {
      playerScore = 0;
@@ -133,5 +145,10 @@
 
      document.getElementById("your-choice").innerHTML = " ";
      document.getElementById("computer-choice").innerHTML = " ";
-
+    
+     document.getElementById("your-emoji").innerHTML = "Ready !";
+     document.getElementById("computer-emoji").innerHTML = "Ready !";
+     
+     
  }
+ 
