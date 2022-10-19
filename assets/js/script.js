@@ -18,12 +18,12 @@
              reset.addEventListener("click", restartGame);
  
              runGame(playerChoice);
+            
              
          })
-       
-        
-       
-     }
+         
+         
+    }
 
  })
  // Running game.
@@ -35,10 +35,12 @@
      checkWinner(playerChoice, compChoice);
      document.getElementById("your-emoji").innerHTML = playerChoice;
      document.getElementById("computer-emoji").innerHTML = compChoice;
-     
+    
      if(playerScore >= 10 || computerScore >= 10){
-        gameOver();
+        gameOver(playerScore, computerScore);
+        
      }
+    
  }
 
  function computerChoice() { // Random selection for computer choice.
@@ -158,6 +160,6 @@
 
  function gameOver(){
     console.log("game over");
-
+    restartGame();
  }
  
