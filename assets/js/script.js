@@ -158,8 +158,24 @@
      
  }
 
- function gameOver(){
-    console.log("game over");
-    restartGame();
+ function gameOver(buttons){
+    console.log("game over check");
+    document.getElementById("your-emoji").innerHTML = " ";
+    document.getElementById("computer-emoji").innerHTML = " ";
+    
+    if(playerScore === 10){
+        document.getElementById("your-choice").innerHTML = "PLAYER WINS ! ";
+        document.getElementById("computer-choice").innerHTML = " ";
+       
+    }else if(computerScore === 10){
+        document.getElementById("your-choice").innerHTML = " ";
+        document.getElementById("computer-choice").innerHTML = "COMPUTER WINS !";
+        
+    }
+    if(playerScore  === 10 || computerScore === 10){
+         
+        buttons = restartGame();
+        
+    }
  }
  
