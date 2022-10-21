@@ -36,11 +36,20 @@
     
      if(playerScore >= 10 || computerScore >= 10){
         openPopup();
-        restartGame();
     }
     let removePopup = document.getElementById("close-popup");
     removePopup.addEventListener("click", closePopup);
     removePopup.addEventListener("click", restartGame);
+
+    if(playerScore >= 10){
+        document.getElementById("result").innerHTML = "Player Wins!";
+        document.getElementById("endinfo").innerHTML = "Player:"+ playerScore + " " + " Computer:" + computerScore;
+    }
+    else if(computerScore >= 10){
+        document.getElementById("result").innerHTML = "Computer Wins!"
+        document.getElementById("endinfo").innerHTML = "Player:"+ playerScore + " " + " Computer:" + computerScore;
+    }
+
    
     
  }
@@ -147,7 +156,8 @@ function restartGame() {   // Restart the game
      
      
  }
- function openPopup(){
+ function openPopup(playerScore, computerScore){
+  
     popup.classList.add("open-popup");
    
 }
