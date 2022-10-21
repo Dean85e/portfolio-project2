@@ -46,8 +46,26 @@
         document.getElementById("endinfo").innerHTML = "Player:"+ playerScore + " " + " Computer:" + computerScore;
     }
     else if(computerScore >= 10){
-        document.getElementById("result").innerHTML = "Computer Wins!"
+        document.getElementById("result").innerHTML = "Computer Wins!";
         document.getElementById("endinfo").innerHTML = "Player:"+ playerScore + " " + " Computer:" + computerScore;
+    }
+    if(playerScore == 10 && computerScore > 7){
+        document.getElementById("message").innerHTML = "Close call but victory is yours!";
+    }
+    else if(computerScore == 10 && playerScore > 7){
+        document.getElementById("message").innerHTML = "Close game better luck next time!";
+    }
+    else if(playerScore == 10 && computerScore < 4){
+        document.getElementById("message").innerHTML = "Fantastic work complete Annihilation!";
+    }
+    else if(playerScore < 4 && computerScore == 10){
+        document.getElementById("message").innerHTML = "You just got schooled!";
+    }
+    else if(playerScore == 10 && computerScore >=4 <=7){
+        document.getElementById("message").innerHTML = "Easy work, Try again";
+    }
+    else if(playerScore >=4 <=7 && computerScore == 10){
+        document.getElementById("message").innerHTML = "Unlucky, Try again";
     }
 
    
