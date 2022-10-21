@@ -1,9 +1,7 @@
  //    Declaring variables with global scope.         
  let playerScore = 0;
  let computerScore = 0;
-
-
-    
+ let popup = document.getElementById("popup-window");
 
  // Wait for the Dom content to be loaded.
  // Add Event listeners to the buttons.
@@ -16,17 +14,17 @@
              let playerChoice = this.getAttribute("data-choice");
              let reset = document.getElementById("restart");
              reset.addEventListener("click", restartGame);
- 
+            
+           
+    
              runGame(playerChoice);
             
-             
          })
-         
          
     }
 
  })
- // Running game.
+                                   // Running game.
  function runGame(playerChoice) {
 
      console.log(playerChoice);
@@ -37,12 +35,15 @@
      document.getElementById("computer-emoji").innerHTML = compChoice;
     
      if(playerScore >= 10 || computerScore >= 10){
-        gameOver(playerScore, computerScore);
-        
-     }
+        openPopup();
+        restartGame();
+    }
+    let removePopup = document.getElementById("close-popup");
+    removePopup.addEventListener("click", closePopup);
+    removePopup.addEventListener("click", restartGame);
+   
     
  }
-
  function computerChoice() { // Random selection for computer choice.
 
      let compChoice = Math.floor(Math.random() * 3);
@@ -62,12 +63,8 @@
          }
          
      }
-     
-      
- 
- // Determine if player has won or computer has won.
-
- function checkWinner(playerChoice, computerChoice) {
+                                             // Determine if player has won or computer has won.
+function checkWinner(playerChoice, computerChoice) {
 
      if (playerChoice === computerChoice) {
 
@@ -118,11 +115,9 @@
                  document.getElementById("computer-choice").innerHTML = null;
              }
             
-
      }
     
-    
- }
+}
  // Increment player score & user Score .
  function incrementPlayerScore() {
      ++playerScore;
@@ -130,19 +125,14 @@
 
 
  }
-
- function incrementComputerScore() {
+function incrementComputerScore() {
      ++computerScore;
      document.getElementById("computer-score").innerHTML = "Computer: " + computerScore;
 
 
 
  }
-
- 
-
-                           // Restart the game.
- function restartGame() {
+function restartGame() {   // Restart the game
      playerScore = 0;
      computerScore = 0;
 
@@ -157,25 +147,11 @@
      
      
  }
-
- function gameOver(buttons){
-    console.log("game over check");
-    document.getElementById("your-emoji").innerHTML = " ";
-    document.getElementById("computer-emoji").innerHTML = " ";
-    
-    if(playerScore === 10){
-        document.getElementById("your-choice").innerHTML = "PLAYER WINS ! ";
-        document.getElementById("computer-choice").innerHTML = " ";
-       
-    }else if(computerScore === 10){
-        document.getElementById("your-choice").innerHTML = " ";
-        document.getElementById("computer-choice").innerHTML = "COMPUTER WINS !";
-        
-    }
-    if(playerScore  === 10 || computerScore === 10){
-         
-        buttons = restartGame();
-        
-    }
- }
+ function openPopup(){
+    popup.classList.add("open-popup");
+   
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
  
