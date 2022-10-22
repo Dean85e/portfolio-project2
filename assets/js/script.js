@@ -22,14 +22,14 @@ let startGame = document.getElementById("start-game");
 
              runGame(playerChoice);
 
-         })
+         });
         
 
      }
 
- })
+ });
  // Running game.
- function runGame(playerChoice) {
+ function runGame(playerChoice, compChoice) {
 
    
     startGame.addEventListener("click",  closeRules, restartGame);
@@ -100,13 +100,13 @@ let startGame = document.getElementById("start-game");
          case 0:
              return "Rock";
 
-             break;
+             
          case 1:
              return "Scissors";
-             break;
+             
          case 2:
              return "Paper";
-             break;
+             
 
      }
 
@@ -185,8 +185,8 @@ let startGame = document.getElementById("start-game");
      document.getElementById("your-choice").innerHTML = " ";
      document.getElementById("computer-choice").innerHTML = " ";
 
-     document.getElementById("your-emoji").innerHTML = "Ready !";
-     document.getElementById("computer-emoji").innerHTML = "Ready !";
+     document.getElementById("your-emoji").innerHTML = "Ready";
+     document.getElementById("computer-emoji").innerHTML = "Ready";
 
 
  }
@@ -209,5 +209,5 @@ let startGame = document.getElementById("start-game");
 
  function closePopup() {
      popup.classList.remove("open-popup");
-     openRules()
+     openRules();
  }
