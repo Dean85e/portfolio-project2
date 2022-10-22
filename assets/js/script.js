@@ -2,6 +2,7 @@
  let playerScore = 0;
  let computerScore = 0;
  let popup = document.getElementById("popup-window");
+ const emoji = ["✊", "🖐️", "✌️"];
 
  // Wait for the Dom content to be loaded.
  // Add Event listeners to the buttons.
@@ -29,6 +30,24 @@
 
      compChoice = computerChoice();
      checkWinner(playerChoice, compChoice);
+     if(playerChoice === "Rock"){
+        playerChoice = emoji[0];
+     }
+     if(playerChoice === "Paper"){
+        playerChoice = emoji[1];
+     }
+     if(playerChoice === "Scissors"){
+        playerChoice = emoji[2];
+     }
+     if(compChoice === "Rock"){
+        compChoice = emoji[0];
+     }
+     if(compChoice === "Paper"){
+        compChoice = emoji[1];
+     }
+     if(compChoice === "Scissors"){
+        compChoice = emoji[2];
+     }
      document.getElementById("your-emoji").innerHTML = playerChoice;
      document.getElementById("computer-emoji").innerHTML = compChoice;
     
@@ -77,6 +96,7 @@
      switch (compChoice) {
          case 0:
              return "Rock";
+           
              break;
          case 1:
              return "Scissors";
