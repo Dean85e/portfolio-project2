@@ -27,9 +27,7 @@
                                    // Running game.
  function runGame(playerChoice) {
 
-     console.log(playerChoice);
      compChoice = computerChoice();
-     console.log(compChoice);
      checkWinner(playerChoice, compChoice);
      document.getElementById("your-emoji").innerHTML = playerChoice;
      document.getElementById("computer-emoji").innerHTML = compChoice;
@@ -103,12 +101,10 @@ function checkWinner(playerChoice, computerChoice) {
      switch (playerChoice) {
          case "Rock":
              if (computerChoice === "Paper") {
-                 console.log("Computer is Winner");
                  document.getElementById("your-choice").innerHTML = null;
                  document.getElementById("computer-choice").innerHTML = "Paper Wins!";
                  incrementComputerScore();
              } else {
-                 console.log("Computer is Loser");
                  incrementPlayerScore();
                  document.getElementById("your-choice").innerHTML = "Rock Wins!";
                  document.getElementById("computer-choice").innerHTML = null;
@@ -117,26 +113,21 @@ function checkWinner(playerChoice, computerChoice) {
 
          case "Paper":
              if (computerChoice === "Scissors") {
-                 console.log("Computer is Winner");
                  document.getElementById("your-choice").innerHTML = null;
                  document.getElementById("computer-choice").innerHTML = "Scissors Wins!";
                  incrementComputerScore();
-             } else {
-                 console.log("Computer is Loser");
+             } else{
                  incrementPlayerScore();
                  document.getElementById("your-choice").innerHTML = "Paper Wins!";
                  document.getElementById("computer-choice").innerHTML = null;
-
-             }
+                }
              break;
          case "Scissors":
              if (computerChoice === "Rock") {
-                 console.log("Computer is Winner");
                  document.getElementById("your-choice").innerHTML = null;
                  document.getElementById("computer-choice").innerHTML = "Rock Wins!";
                  incrementComputerScore();
              } else {
-                 console.log("Computer is Loser");
                  incrementPlayerScore();
                  document.getElementById("your-choice").innerHTML = "Scissors Wins!";
                  document.getElementById("computer-choice").innerHTML = null;
