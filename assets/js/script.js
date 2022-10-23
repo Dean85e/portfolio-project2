@@ -4,26 +4,28 @@
  let popup = document.getElementById("popup-window");
  let rules = document.getElementById("rules");
  const emoji = ["✊", "🖐️", "✌️"];
-openRules();
-let startGame = document.getElementById("start-game");
-
+ openRules();
+ let startGame = document.getElementById("start-game");
+ startGame.addEventListener("click", closeRules, restartGame);
  // Wait for the Dom content to be loaded.
  // Add Event listeners to the buttons.
  document.addEventListener("DOMContentLoaded", function () {
      let buttons = document.getElementsByTagName("button");
-     
+
+
      // Loop through the buttons and listen for click selection.
      for (let button of buttons) {
-         button.addEventListener("click", function () {
-             let playerChoice = this.getAttribute("data-choice");
-             let reset = document.getElementById("restart");
-             reset.addEventListener("click", restartGame);
-            
+         if (button.id === "p-choice") {
+             button.addEventListener("click", function () {
+                 let playerChoice = this.getAttribute("data-choice");
+                 let reset = document.getElementById("restart");
+                 reset.addEventListener("click", restartGame);
 
-             runGame(playerChoice);
 
-         });
-        
+                 runGame(playerChoice);
+
+             });
+         }
 
      }
 
@@ -31,9 +33,9 @@ let startGame = document.getElementById("start-game");
  // Running game.
  function runGame(playerChoice, compChoice) {
 
-   
-    startGame.addEventListener("click",  closeRules, restartGame);
-    
+
+
+
 
      compChoice = computerChoice();
      checkWinner(playerChoice, compChoice);
@@ -61,7 +63,7 @@ let startGame = document.getElementById("start-game");
      if (playerScore >= 10 || computerScore >= 10) {
          openPopup();
      }
-    
+
 
      let removePopup = document.getElementById("close-popup");
      removePopup.addEventListener("click", closePopup);
@@ -100,13 +102,13 @@ let startGame = document.getElementById("start-game");
          case 0:
              return "Rock";
 
-             
+
          case 1:
              return "Scissors";
-             
+
          case 2:
              return "Paper";
-             
+
 
      }
 
@@ -193,7 +195,7 @@ let startGame = document.getElementById("start-game");
 
  function openRules() {
      rules.classList.add("rule-text-popup");
-    restartGame();
+     restartGame();
  }
 
  function closeRules() {

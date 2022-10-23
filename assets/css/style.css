@@ -1,14 +1,32 @@
  body {
      font-family: permanent marker, sans-serif;
-     background-color: #678e92;
      margin: 0;
+     padding: 0;
  }
 
  #heading{
     display: flex;
     justify-content: center;
  }
- .player-selection {
+ .container{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+ }
+
+.hero{
+    background-image: url(/assets/images/hero-image.jpg);
+    background-color: #aba382;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.player-selection {
      display: flex;
      justify-content: center;
      padding: 5px 5px 5px 5px;

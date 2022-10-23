@@ -13,16 +13,21 @@
 </head>
 
 <body>
+    <div class="hero">
     <header>
-        <h1 id="heading">Rock paper Scissors</h1>
+        
+            <div class="container">
+                <h1 id="heading">Rock paper Scissors</h1>
+            
+        
     </header>
     <section>
         <h2 class="instruction">Make Your Choice :</h2>
-
+        <div class="hero-image"></div>
         <div class="player-selection">
-            <button class="select" data-choice="Rock" aria-label="Rock"> ✊ </button>
-            <button class="select" data-choice="Paper" aria-label="Paper"> 🖐️</button>
-            <button class="select" data-choice="Scissors" aria-label="Scissors"> ✌️</button>
+            <button class="select" id="p-choice" data-choice="Rock" aria-label="Rock"> ✊ </button>
+            <button class="select" id="p-choice" data-choice="Paper" aria-label="Paper"> 🖐️</button>
+            <button class="select" id="p-choice" data-choice="Scissors" aria-label="Scissors"> ✌️</button>
         </div>
         <div id="reset-game">
             <button id="restart" data-choice="Reset" aria-label="Restart">Restart Game</button>
@@ -60,8 +65,8 @@
             </div>
         </div>
     </section>
-    
-
+</div>
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>
