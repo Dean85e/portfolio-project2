@@ -51,9 +51,10 @@
     justify-content: center;
 }
 .popup{
-    width: 400px;
+    width: 50%;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 25px;
+    border: black solid 1px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -184,9 +185,10 @@
  }
 
  .rule-text {
-    width: 400px;
+    width: 50%;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 25px;
+    border: black solid 1px;
     position: absolute;
     top: 0;
     left: 50%;
