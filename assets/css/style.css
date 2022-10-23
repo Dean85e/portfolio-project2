@@ -11,18 +11,12 @@
  .container{
     height: 150px;
     width: 100%;
-    background-color: #aba382;
+    background-color: #808080;
+    margin-top: -25px;
 
  }
-
-.hero{
-    
-    width: 100%;
-    
-
-}
-
-.player-selection {
+ 
+ .player-selection {
      display: flex;
      justify-content: center;
      padding: 5px 5px 5px 5px;
@@ -87,7 +81,7 @@
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #aba382;
+    background-color: #808080;
     font-family: 'permanent marker';
 }
 
@@ -103,7 +97,7 @@
  }
 
  .player-area {
-    background-color: #aba382;
+    background-color:  #808080;
     height: 250px;
     width: 45%;
     float: left;
@@ -117,7 +111,7 @@
  }
 
  .computer-area {
-    background-color: #aba382;
+    background-color:  #808080;
     height: 250px;
     width: 45%;
     float: left;
@@ -172,7 +166,7 @@
 
      padding: 1em 1em;
      border-radius: 6px;
-     background-color: #aba382;
+     background-color: #808080;
      font-family: 'permanent marker';
 
  }
@@ -221,6 +215,17 @@
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #aba382;
+    background-color: #808080;
     font-family: 'permanent marker';
+}
+footer{
+    background-color: #808080;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+.foot {
+    display: flex;
+    justify-content: center;
 }
