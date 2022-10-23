@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
  }
+
  .container{
     height: 150px;
     width: 100%;
@@ -101,7 +102,7 @@
     height: 250px;
     width: 45%;
     float: left;
-    border: #fff solid 1px;
+    border: black solid 1px;
     border-radius: 25px;
     margin-left: 2%;
     margin-right: 2%;
@@ -115,7 +116,7 @@
     height: 250px;
     width: 45%;
     float: left;
-    border: #fff solid 1px;
+    border: black solid 1px;
     border-radius: 25px;
     margin-left: 2%;
     margin-right: 2%;
@@ -228,4 +229,12 @@ footer{
 .foot {
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width: 316px) {
+     #heading{
+        text-align: center;
+    }
+    .container{
+        height: 200px;
+    }
 }
