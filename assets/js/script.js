@@ -15,7 +15,7 @@
 
      // Loop through the buttons and listen for click selection.
      for (let button of buttons) {
-         if (button.id === "p-choice") {
+         if (button.className === "select") {
              button.addEventListener("click", function () {
                  let playerChoice = this.getAttribute("data-choice");
                  let reset = document.getElementById("restart");
