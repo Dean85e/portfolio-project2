@@ -134,7 +134,7 @@
 * When i created the popup for the rules which has the play button, Upon page load this popup displays but when the user had to click the play button to start the game, on the first click it would run the game behind the pop up, on second click it would behave as normal which is to close the popup
 and set the game text to "Ready".  I suspected this was because of the tag name 'Button'. 
 
-* To fix this bug I put an 'if' statement within the for loop to only add event listeners for the run game function with the class of "select". 
+* To fix this bug I put an 'if' statement within the for loop to only add event listeners for the run game function for buttons with the class of "select". 
 
 ### Unsolved bugs 
 
