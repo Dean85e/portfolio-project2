@@ -38,8 +38,8 @@
 
 
      compChoice = computerChoice();
-     checkWinner(playerChoice, compChoice);
-     if (playerChoice === "Rock") {
+     checkWinner(playerChoice, compChoice);         // converting player & computer choice to emoji's.
+     if (playerChoice === "Rock") {             
          playerChoice = emoji[0];
      }
      if (playerChoice === "Paper") {
@@ -60,23 +60,23 @@
      document.getElementById("your-emoji").innerHTML = playerChoice;
      document.getElementById("computer-emoji").innerHTML = compChoice;
 
-     if (playerScore >= 10 || computerScore >= 10) {
+     if (playerScore >= 10 || computerScore >= 10) {                // if player or computer reaches 10 open  popup to display results.
          openPopup();
      }
 
-
+                                                                              // Add event listener to button on end result.
      let removePopup = document.getElementById("close-popup");
      removePopup.addEventListener("click", closePopup);
      removePopup.addEventListener("click", restartGame);
-
-     if (playerScore >= 10) {
+                                                                                       
+     if (playerScore >= 10) {                                               // Displaying the scores at game end
          document.getElementById("result").innerHTML = "Player Wins!";
          document.getElementById("endinfo").innerHTML = "Player:" + playerScore + " " + " Computer:" + computerScore;
      } else if (computerScore >= 10) {
          document.getElementById("result").innerHTML = "Computer Wins!";
          document.getElementById("endinfo").innerHTML = "Player:" + playerScore + " " + " Computer:" + computerScore;
      }
-     if (playerScore == 10 && computerScore > 7) {
+     if (playerScore == 10 && computerScore > 7) {                       // Deciding which message gets displayed after the game has finished.
          document.getElementById("message").innerHTML = "Close call but victory is yours!";
      } else if (computerScore == 10 && playerScore > 7) {
          document.getElementById("message").innerHTML = "Close game better luck next time!";
@@ -93,7 +93,7 @@
 
  }
 
- function computerChoice() { // Random selection for computer choice.
+ function computerChoice() {                                 // Random selection for computer choice.
 
      let compChoice = Math.floor(Math.random() * 3);
 
@@ -113,7 +113,7 @@
      }
 
  }
- // Determine if player has won or computer has won.
+                                                                 // Determine if player has won or computer has won.
  function checkWinner(playerChoice, computerChoice) {
 
      if (playerChoice === computerChoice) {
@@ -161,7 +161,7 @@
      }
 
  }
- // Increment player score & user Score .
+                                                                 // Increment player score & computer Score .
  function incrementPlayerScore() {
      ++playerScore;
      document.getElementById("player-score").innerHTML = "Player: " + playerScore;
@@ -177,7 +177,7 @@
 
  }
 
- function restartGame() { // Restart the game
+ function restartGame() {                            // Restart the game
      playerScore = 0;
      computerScore = 0;
 
@@ -193,23 +193,23 @@
 
  }
 
- function openRules() {
+ function openRules() {                         // Rules of the game.
      rules.classList.add("rule-text-popup");
      restartGame();
  }
 
- function closeRules() {
+ function closeRules() {                        // Close rules of the game.
      rules.classList.remove("rule-text-popup");
      restartGame();
  }
 
 
- function openPopup(playerScore, computerScore) {
+ function openPopup(playerScore, computerScore) {    // End game message.
 
      popup.classList.add("open-popup");
  }
 
- function closePopup() {
+ function closePopup() {                          // Close end game message and open rules.
      popup.classList.remove("open-popup");
      openRules();
  }

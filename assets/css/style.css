@@ -1,10 +1,10 @@
  body {
-     font-family: permanent marker, sans-serif;
+     font-family: permanent marker, sans-serif;  /*Set font and margin*/
      margin: 0;
      
  }
 
- #heading{
+ #heading{                 /*Style header*/
     display: flex;
     justify-content: center;
     text-align: center;
@@ -17,13 +17,25 @@
     margin-top: -25px;
 
  }
+
+ .instruction {
+    display: flex;
+    justify-content: center;
+}
+
+ .select {                                  /*Style for player selection emoji's */
+                                            /*Some inspiration was taken from youtube here as credited in READme.md*/
+     padding: 10px 10px 10px 10px;
+     margin: 2%;
+     font-size: 2rem;
+ }
   
- 
- .player-selection {
+.player-selection {
      display: flex;
      justify-content: center;
      padding: 5px 5px 5px 5px;
  }
+
  button.select{
     background: none;
     border: none;
@@ -32,18 +44,27 @@
      font-size: 3rem;
     transition: 100ms;
  }
+
  .select:hover {
     transform: scale(1.3);
  }
-
+                           /* Style Reset & Reset button*/
  #reset-game{
      display: flex;
      justify-content: center;
      margin-top: 15px;
      margin-bottom: 0;
+}
 
- }
-.popup-container{
+button#restart {
+    padding: 1em 1em;
+    border-radius: 6px;
+    background-color: #808080;
+    font-family: 'permanent marker';
+    color: black;
+}
+
+.popup-container{         /*Style the pop up for end of game*/  /*Some inspiration was taken from youtube here as credited in READme.md*/
     width: 100%;
     height: 100%;
     clear: both;
@@ -51,6 +72,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .popup{
     width: 50%;
     background-color: #fff;
@@ -71,11 +93,13 @@
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
+
 .popup h2 {
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0 10px;
 }
+
 .popup button {
     width: 100%;
     margin-top: 50px;
@@ -89,19 +113,8 @@
     color: black;
     font-family: 'permanent marker';
 }
-
- .instruction {
-     display: flex;
-     justify-content: center;
- }
-
- .select {
-     padding: 10px 10px 10px 10px;
-     margin: 2%;
-     font-size: 2rem;
- }
-
- .player-area {
+                                        /*Style Player game area */
+.player-area {
     background-color:  #808080;
     height: 250px;
     width: 45%;
@@ -112,9 +125,8 @@
     margin-right: 2%;
     margin-top: 50px;
     margin-bottom: 50px;
-
- }
-
+}
+                                     /*Style Computer game area */
  .computer-area {
     background-color:  #808080;
     height: 250px;
@@ -126,26 +138,26 @@
     margin-right: 2%;
     margin-top: 50px;
     margin-bottom: 50px;
-
- }
- 
+}
+                                     /*Style Player score */
+                                
 #player-score {
      display: flex;
      justify-content: center;
  }
-
- #computer-score {
+                                      /*Style Computer score */
+ #computer-score {               
      display: flex;
      justify-content: center;
  }
- 
+                                      /*Style emoji's & choice appearing in player & computer game area*/
  #your-emoji{
     display: flex;
     justify-content: center;
     margin-top: 20px;
     font-size: 3rem;
  }
-
+                                     
  #computer-emoji{
     display: flex;
     justify-content: center;
@@ -163,31 +175,10 @@
  #computer-choice {
      display: flex;
      justify-content: center;
-     
- }
- 
-
- button#restart {
-
-     padding: 1em 1em;
-     border-radius: 6px;
-     background-color: #808080;
-     font-family: 'permanent marker';
-     color: black;
-
- }
-
- .game-rules {
-    width: 100%;
-    height: 100%;
-    clear: both;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
- }
-
- .rule-text {
+}
+                                       /*Style for game rules popup */
+                                            /*Some inspiration was taken from youtube here as credited in READme.md*/
+.rule-text {                    
     width: 50%;
     background-color: #fff;
     border-radius: 25px;
@@ -200,19 +191,20 @@
     padding: 0 30px 30px;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
-
- }
+}
  
 .rule-text-popup{
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
+
 .rule-text h2 {
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0 10px;
 }
+
 .rule-text button {
     width: 100%;
     margin-top: 50px;
@@ -227,10 +219,10 @@
     font-family: 'permanent marker';
 }
  
-
+                                             /* Add media query for small devices */
 @media screen and (max-width: 316px) {
      
-    .container{
+    .header-container{
         height: 200px;
     }
 }

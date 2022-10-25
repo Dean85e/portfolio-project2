@@ -13,7 +13,7 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 
-<body>
+<body>                                   <!--Header-->  
     <div class="header-container">
         <header>
             <h1 id="heading">Rock Paper Scissors</h1>
@@ -23,17 +23,17 @@
     </div>
     
     <section>
-
+                                    <!--Game Selection Buttons -->
         </div>
         <div class="player-selection">
             <button class="select" data-choice="Rock" aria-label="Rock"> ✊ </button>
             <button class="select" data-choice="Paper" aria-label="Paper"> 🖐️</button>
             <button class="select" data-choice="Scissors" aria-label="Scissors"> ✌️</button>
         </div>
-        <div id="reset-game">
+        <div id="reset-game">        <!-- Restart Game Button-->
             <button id="restart" data-choice="Reset" aria-label="Restart">Restart Game</button>
         </div>
-        <div class="popup-container">
+        <div class="popup-container">  <!--End Of Game Popup-->
             <div class="popup" id="popup-window">
                 <h2 id="result">Placeholder</h2>
                 <p id="endinfo">Placeholder paragraph</p>
@@ -44,18 +44,18 @@
         </div>
 
 
-        <div class="player-area">
+        <div class="player-area">      <!--Player Game Area -->
             <h3 id="player-score">Player:<span id="player">0</span></h3>
             <p id="your-emoji"></p>
             <p id="your-choice"></p>
         </div>
 
-        <div class="computer-area">
+        <div class="computer-area">    <!--Computer Game Area -->
             <h3 id="computer-score">Computer:<span id="computer">0</span></h3>
             <p id="computer-emoji"></p>
             <p id="computer-choice"></p>
         </div>
-        <div class="game-rules">
+                                            <!-- Game Rules Popup -->
             <div class="rule-text" id="rules">
                 <h3>Rules</h3>
                 <p>Scissors cuts Paper</p>
@@ -64,9 +64,9 @@
                 <p>First to 10 wins</p>
                 <button id="start-game" aria-label="Start Game">Play</button>
             </div>
-        </div>
+         
     </section>
-
+                                      <!--Link to JavaScript -->
     <script src="assets/js/script.js"></script>
 </body>
 
