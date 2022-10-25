@@ -24,11 +24,10 @@
  * Have a clear understanding of the interactivity of the game.
  * Have a clear understanding of the rules of the game.
  * Have a clear understanding of the scoring rounds.
- * To be informed of results of the game.
+ * To be informed of the results of the game.
 
  ## Fonts & colors 
 
- * The main color for this game is : 
  * The font used in this game throughout is "Permanent Marker" I felt this font gave the game a more attractive look. The fall back option is "Sans-Serif".
  * The main color for this game is : HEX color #808080 Name: Grey.
 
@@ -69,7 +68,7 @@
 
 ### Game Area
  
- * The game area consists of two panels side by side within these panels is a display of the game information such as choices that have been made, updates the score each time a round has been won and lets the user know the result of each round, both panels will display "Ready" until the user selects there first choice.
+ * The game area consists of two panels side by side within these panels is a display of the game information such as choices that have been made, updates the score each time a round has been won and lets the user know the result of each round, both panels will display "Ready" until the user selects makes a choice.
 
 
   ![Ready Game Area](/assets/images/ready-game-area.png)
@@ -79,14 +78,14 @@
 
 * When either player reaches ten a pop up message will appear displaying each players score, which player has won and a message to the user which will be different depending on the score of the game, there is three possible winning messages and also three possible loosing messages which makes for a good UX.
 
-* The user then must click the "OK" button to proceed to start a new game in which the popup will change to the game rules and the game area will default to "Ready".
+* The user must then click the "OK" button to proceed to start a new game in which the popup will change to the game rules where the user will have to click play to begin and the game area will default to "Ready".
 
 
  ![End Game Message](/assets/images/end-game-message.png)
 
  ### Features left to Implement 
 
- * I would like to add a best of five rounds feature which would track and display each players rounds won when the is time to do so.
+ * I would like to add a best of five rounds feature which would track and display each players rounds won when there is time to do so.
 
  * I would also like to add the lizard and spock options.
 
