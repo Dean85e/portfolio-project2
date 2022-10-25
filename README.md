@@ -167,10 +167,22 @@ and set the game text to "Ready".  I suspected this was because of the tag name 
    6. Press enter and the local clone will be created.
 
    ## Credits
+  
+  * Some inspiration for the emoji buttons was taken from this [Youtube Tutorial](https://youtu.be/1yS-JV4fWqY)
 
+  * Some inspiration for the popup was taken from this this [Youtube Tutorial](https://youtu.be/AF6vGYIyV8M)
+
+  * Throughout the building process I found many helpful threads online such as : 
+     *  [Stack Overflow](https://stackoverflow.com)
+     *  [W3Schools](https://www.w3schools.com/)
 
    ## Media
+  * The font used in this project was taken from [Google fonts](https://fonts.google.com)
 
+  * The favicon image was taken from [Vecteezy](https://www.vecteezy.com/vector-art/690876-rock-paper-scissors-vector-design
+)
+
+* The emoji's used in this project were taken from [Here](https://emojidb.org/rock%E2%80%93paper%E2%80%93scissors-emojis)
 
    ## Languages Used 
 

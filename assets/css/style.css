@@ -10,13 +10,14 @@
     text-align: center;
  }
 
- .container{
+ .header-container{
     height: 150px;
     width: 100%;
     background-color: #808080;
     margin-top: -25px;
 
  }
+  
  
  .player-selection {
      display: flex;
