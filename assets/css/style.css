@@ -1,228 +1,239 @@
+ /*Set font and margin*/
  body {
-     font-family: permanent marker, sans-serif;  /*Set font and margin*/
+     font-family: permanent marker, sans-serif;
      margin: 0;
-     
+
  }
 
- #heading{                 /*Style header*/
-    display: flex;
-    justify-content: center;
-    text-align: center;
+ /*Style header*/
+ #heading {
+     display: flex;
+     justify-content: center;
+     text-align: center;
  }
 
- .header-container{
-    height: 150px;
-    width: 100%;
-    background-color: #808080;
-    margin-top: -25px;
+ .header-container {
+     height: 150px;
+     width: 100%;
+     background-color: #808080;
+     margin-top: -25px;
 
  }
 
  .instruction {
-    display: flex;
-    justify-content: center;
-}
+     display: flex;
+     justify-content: center;
+ }
 
- .select {                                  /*Style for player selection emoji's */
-                                            /*Some inspiration was taken from youtube here as credited in READme.md*/
+ /*Style for player selection emoji's */
+ /*Some inspiration was taken from youtube here as credited in READme.md*/
+ .select {
      padding: 10px 10px 10px 10px;
      margin: 2%;
      font-size: 2rem;
  }
-  
-.player-selection {
+
+ .player-selection {
      display: flex;
      justify-content: center;
      padding: 5px 5px 5px 5px;
  }
 
- button.select{
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
+ button.select {
+     background: none;
+     border: none;
+     outline: none;
+     cursor: pointer;
      font-size: 3rem;
-    transition: 100ms;
+     transition: 100ms;
  }
 
  .select:hover {
-    transform: scale(1.3);
+     transform: scale(1.3);
  }
-                           /* Style Reset & Reset button*/
- #reset-game{
+
+ /* Style Reset & Reset button*/
+ #reset-game {
      display: flex;
      justify-content: center;
      margin-top: 15px;
      margin-bottom: 0;
-}
+ }
 
-button#restart {
-    padding: 1em 1em;
-    border-radius: 6px;
-    background-color: #808080;
-    font-family: 'permanent marker';
-    color: black;
-}
+ button#restart {
+     padding: 1em 1em;
+     border-radius: 6px;
+     background-color: #808080;
+     font-family: 'permanent marker';
+     color: black;
+ }
 
-.popup-container{         /*Style the pop up for end of game*/  /*Some inspiration was taken from youtube here as credited in READme.md*/
-    width: 100%;
-    height: 100%;
-    clear: both;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+ /*Style the pop up for end of game*/
+ /*Some inspiration was taken from youtube here as credited in READme.md*/
+ .popup-container {
+     width: 100%;
+     height: 100%;
+     clear: both;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
-.popup{
-    width: 50%;
-    background-color: #fff;
-    border-radius: 25px;
-    border: black solid 1px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-}
+ .popup {
+     width: 50%;
+     background-color: #fff;
+     border-radius: 25px;
+     border: black solid 1px;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -50%) scale(0.1);
+     text-align: center;
+     padding: 0 30px 30px;
+     visibility: hidden;
+     transition: transform 0.4s, top 0.4s;
+ }
 
-.open-popup{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
+ .open-popup {
+     visibility: visible;
+     top: 50%;
+     transform: translate(-50%, -50%) scale(1);
+ }
 
-.popup h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
+ .popup h2 {
+     font-size: 38px;
+     font-weight: 500;
+     margin: 30px 0 10px;
+ }
 
-.popup button {
-    width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #808080;
-    color: black;
-    font-family: 'permanent marker';
-}
-                                        /*Style Player game area */
-.player-area {
-    background-color:  #808080;
-    height: 250px;
-    width: 45%;
-    float: left;
-    border: black solid 1px;
-    border-radius: 25px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-                                     /*Style Computer game area */
+ .popup button {
+     width: 100%;
+     margin-top: 50px;
+     padding: 10px 0;
+     border: 0;
+     outline: none;
+     font-size: 18px;
+     border-radius: 4px;
+     cursor: pointer;
+     background-color: #808080;
+     color: black;
+     font-family: 'permanent marker';
+ }
+
+ /*Style Player game area */
+ .player-area {
+     background-color: #808080;
+     height: 250px;
+     width: 45%;
+     float: left;
+     border: black solid 1px;
+     border-radius: 25px;
+     margin-left: 2%;
+     margin-right: 2%;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
+
+ /*Style Computer game area */
  .computer-area {
-    background-color:  #808080;
-    height: 250px;
-    width: 45%;
-    float: left;
-    border: black solid 1px;
-    border-radius: 25px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-                                     /*Style Player score */
-                                
-#player-score {
+     background-color: #808080;
+     height: 250px;
+     width: 45%;
+     float: right;
+     border: black solid 1px;
+     border-radius: 25px;
+     margin-left: 2%;
+     margin-right: 2%;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
+
+ /*Style Player score */
+ #player-score {
      display: flex;
      justify-content: center;
  }
-                                      /*Style Computer score */
- #computer-score {               
+
+ /*Style Computer score */
+ #computer-score {
      display: flex;
      justify-content: center;
  }
-                                      /*Style emoji's & choice appearing in player & computer game area*/
- #your-emoji{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 3rem;
+
+ /*Style emoji's & choice appearing in player & computer game area*/
+ #your-emoji {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+     font-size: 3rem;
  }
-                                     
- #computer-emoji{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 3rem;
+
+ #computer-emoji {
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+     font-size: 3rem;
  }
 
 
  #your-choice {
      display: flex;
      justify-content: center;
-     
+
  }
 
  #computer-choice {
      display: flex;
      justify-content: center;
-}
-                                       /*Style for game rules popup */
-                                            /*Some inspiration was taken from youtube here as credited in READme.md*/
-.rule-text {                    
-    width: 50%;
-    background-color: #fff;
-    border-radius: 25px;
-    border: black solid 1px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-}
- 
-.rule-text-popup{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
+ }
 
-.rule-text h2 {
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
+ /*Style for game rules popup */
+ /*Some inspiration was taken from youtube here as credited in READme.md*/
+ .rule-text {
+     width: 50%;
+     background-color: #fff;
+     border-radius: 25px;
+     border: black solid 1px;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -50%) scale(0.1);
+     text-align: center;
+     padding: 0 30px 30px;
+     visibility: hidden;
+     transition: transform 0.4s, top 0.4s;
+ }
 
-.rule-text button {
-    width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #808080;
-    color: black;
-    font-family: 'permanent marker';
-}
- 
-                                             /* Add media query for small devices */
-@media screen and (max-width: 316px) {
-     
-    .header-container{
-        height: 200px;
-    }
-}
+ .rule-text-popup {
+     visibility: visible;
+     top: 50%;
+     transform: translate(-50%, -50%) scale(1);
+ }
+
+ .rule-text h2 {
+     font-size: 38px;
+     font-weight: 500;
+     margin: 30px 0 10px;
+ }
+
+ .rule-text button {
+     width: 100%;
+     margin-top: 50px;
+     padding: 10px 0;
+     border: 0;
+     outline: none;
+     font-size: 18px;
+     border-radius: 4px;
+     cursor: pointer;
+     background-color: #808080;
+     color: black;
+     font-family: 'permanent marker';
+ }
+
+ /* Add media query for small devices */
+ @media screen and (max-width: 316px) {
+
+     .header-container {
+         height: 200px;
+     }
+ }
