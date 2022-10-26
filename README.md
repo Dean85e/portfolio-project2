@@ -68,7 +68,7 @@
 
 ### Game Area
  
- * The game area consists of two panels side by side within these panels is a display of the game information such as choices that have been made, updates the score each time a round has been won and lets the user know the result of each round, both panels will display "Ready" until the user selects makes a choice.
+ * The game area consists of two panels side by side within these panels is a display of the game information such as choices that have been made, updates the score each time a round has been won and lets the user know the result of each round, both panels will display "Ready" until the user makes a choice.
 
 
   ![Ready Game Area](/assets/images/ready-game-area.png)
@@ -91,7 +91,7 @@
 
  ## Testing
 
- * I can confirm this game is responsive, looks good and functions on all standard screen sizes using dev tools device tooolbar.
+ * I can confirm this game is responsive, looks good and functions on all standard screen sizes using dev tools device toolbar.
 
  * I have tested that this game works in different browsers such as : Chrome, Edge, Safari, Firefox.
  
@@ -154,16 +154,16 @@ and set the game text to "Ready".  I suspected this was because of the tag name 
 ### To Fork The Repository
   * To make a copy or 'fork' the repository:
   
-  1. Log into GitHub and locate repository.
-  2. On the right hand side of the page select the 'fork' option to create a copy of the original.
+  * Log into GitHub and locate repository.
+  * On the right hand side of the page select the 'fork' option to create a copy of the original.
  
  ### To Create A Local Clone
-   1. Under the repository name, click on the code tab.
-   2. In the clone box, HTTPS tab, click ont the clipboard icon.
-   3. In your IED open GitBash.
-   4. Change the current working directory to the location you want the cloned directory to be made
-   5. Type 'git clone' and then paste the url copied from GitHub.
-   6. Press enter and the local clone will be created.
+   * Under the repository name, click on the code tab.
+   * In the clone box, HTTPS tab, click ont the clipboard icon.
+   * In your IED open GitBash.
+   * Change the current working directory to the location you want the cloned directory to be made
+   * Type 'git clone' and then paste the url copied from GitHub.
+   * Press enter and the local clone will be created.
 
    ## Credits
   
