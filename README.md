@@ -15,6 +15,10 @@
 
  https://github.com/Dean85e/portfolio-project2
 
+ ## Target Audience
+
+ * Typically Rock, Paper, Scissors is often used as a fair choosing method between two people, similar to a coin toss, drawing straws, or throwing a dice in order to settle a dispute or to make an unbiased group decision.
+
  ## UX: User Experience
 
  ### User Stories 
@@ -127,7 +131,7 @@
 
 
 * JS 
-   * some errors were found when passed through the official JSHint validator.
+   * Some errors were found when passed through the official JSHint validator.
    * These errors were made up of missing semi-colons, I went back through my code and added the missing semi-colons, This fixed the issue.
    
 ![js validator](/assets/images/js-validator.png)
@@ -165,7 +169,7 @@ and set the game text to "Ready".  I suspected this was because of the tag name 
  
  ### To Create A Local Clone
    * Under the repository name, click on the code tab.
-   * In the clone box, HTTPS tab, click ont the clipboard icon.
+   * In the clone box, HTTPS tab, click on the clipboard icon.
    * In your IED open GitBash.
    * Change the current working directory to the location you want the cloned directory to be made
    * Type 'git clone' and then paste the url copied from GitHub.
