@@ -31,6 +31,10 @@
  * The font used in this game throughout is "Permanent Marker" I felt this font gave the game a more attractive look. The fall back option is "Sans-Serif".
  * The main color for this game is : HEX color #808080 Name: Grey.
 
+ ### Wireframe
+
+ ![wireframe](/assets/images/wire-frame.png)
+
  ## Features 
 
  ### Rules
